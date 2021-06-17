@@ -45,6 +45,43 @@ class Store {
     return newProduct
   }
 
+  static async recordPurchase(purchase) {
+    // create a new purchase
+    const user = purchase.userInfo
+    const cart = purchase.cart
+
+    if (!user) {
+      throw new BadRequestError(`Please enter user information.`)
+    }
+    if (!cart) {
+      throw new BadRequestError(`Please enter cart information.`)
+    }
+    const requiredFields = ["name", "email"]
+    requiredFields.forEach((field) => {
+      if (!user[field] && user[field] !== 0) {
+        throw new BadRequestError(`Field: "${field}" is required in userInfo`)
+      }
+    })
+    const tax = .07
+    let total = 0;
+    let grandTotal = 0
+    let newPurchase = {productRow:[]}
+    for (const [key, value] of Object.entries(cart)) {
+      let product = storage.get("products").find({ name :key }).value();
+      total = value * product.price;
+      grandTotal += total;
+      let productPlus = {...product ,"Quantity":value,'Total':total};
+      newPurchase.productRow.push(productPlus);
+    }
+
+    grandTotal += (grandTotal*tax);
+    newPurchase["purchase"] = {...user,"Total":grandTotal};
+  
+    storage.get("cart").push(newPurchase).write()
+
+    return newPurchase;
+  }
+
 }
 
 module.exports = Store
