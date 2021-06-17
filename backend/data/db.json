@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Rice Krispies",
+      "category": "food",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+      "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+      "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+      "price": 0.99
+    },
+    {
+      "id": 2,
+      "name": "Flamin Hot Cheetos",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
+      "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
+      "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
+      "price": 1.5
+    },
+    {
+      "id": 3,
+      "name": "Limon Lays",
+      "category": "food",
+      "image": "https://www.lays.com/sites/lays.com/files/2019-09/Limon.png",
+      "source": "https://www.lays.com/products/lays-lim-n-flavored-potato-chips",
+      "description": "It all starts with farm-grown potatoes, cooked and seasoned to perfection. Then we add the zing of real lime.",
+      "price": 3.99
+    },
+    {
+      "id": 4,
+      "name": "Toothbrush",
+      "category": "bathroom",
+      "image": "https://www.amway.com/medias/100957C-en-US-690px-01?context=bWFzdGVyfHJvb3R8MjkyNDZ8aW1hZ2UvanBlZ3xoMmQvaGQxLzg4Mzk5MTg3MTQ5MTAuanBnfGE4YmQzOWJhMzkyZmU0N2FmZDE2MzQzMTM1MmY5ZDgyYTE4ZGNhNzE2ZWU0MDdiYjU5M2U1N2Y0NzhkOWY1MzY",
+      "source": "https://www.amway.com/en_US/Glister%E2%84%A2-Advanced-Toothbrush-p-100957C",
+      "description": "Gets the tough food out!",
+      "price": 1.59
+    },
+    {
+      "id": 5,
+      "name": "Tent",
+      "category": "outdoors",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81uLfbR1tOL._AC_SL1500_.jpg",
+      "source": "https://www.amazon.com/Wenzel-8-Person-Klondike-Tent/dp/B01BIRE7ZW",
+      "description": "Fits the entire family!",
+      "price": 59.99
+    },
+    {
+      "id": 6,
+      "name": "Headphones",
+      "category": "electronics",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/811u6QEwQxL._AC_SX355_.jpg",
+      "source": "https://www.amazon.com/Sony-WH-CH510-Wireless-Headphones-WHCH510/dp/B07WSKKYPR",
+      "description": "Listen to your favorite music without background sound!",
+      "price": 68.99
+    },
+    {
+      "id": 7,
+      "name": "Rice",
+      "category": "food",
+      "image": "https://m.media-amazon.com/images/I/816vo+KExUL._SL1500_.jpg",
+      "source": "https://www.amazon.com/Nishiki-Premium-Grade-Sushi-Rice/dp/B01N6GJ7NJ",
+      "description": "A great side to any dish!",
+      "price": 5.99
+    } 
+  ]
+}
