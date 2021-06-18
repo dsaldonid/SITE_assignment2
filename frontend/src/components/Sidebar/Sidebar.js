@@ -1,13 +1,17 @@
 import "./Sidebar.css"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 export default function Sidebar() {
+  const [sidebar,setSidebar] = useState(false)
+
+  const showsidebar = () => setSidebar(!sidebar)
   return (
-    <section className="Sidebar closed">
-      <div class="wrapper">
-        <span class="toggle-button button closed">
-          <i class="material-icons md-48">arrow_forward</i>
+    <section className= {`Sidebar ${sidebar? "open":'closed'}`}>
+      <span class="toggle-button button closed">
+          <i class="material-icons md-48 arrow" onClick = {showsidebar}>arrow_forward</i>
         </span>
+      <div class={`wrapper1 ${sidebar? "open":'hidden'}`}>
         <div class="ShoppingCart">
           <div class="open">
             <h3 class="">
@@ -69,7 +73,7 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-          <div class="cart-icons">
+          {/* <div class="cart-icons">
             <span class="cart-icon icon button">
               <i class="material-icons md-48">add_shopping_cart</i>
             </span>
@@ -79,7 +83,7 @@ export default function Sidebar() {
             <span class="cart-icon icon button">
               <i class="material-icons md-48">fact_check</i>
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -5,14 +5,13 @@ import Navbar from "../Navbar/Navbar"
 import subNavbar from "../subNavbar/subNavBar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
-import TransactionDetail from "../TransactionDetail/TransactionDetail"
+import ProductDetail from "../ProductDetail/ProductDetail"
 import "./App.css"
 
 export default function App() {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-  const [transactions, setTransactions] = useState([])
-  const [transfers, setTransfers] = useState([])
+  const [products, setProduct] = useState([])
   const [filterInput, setFilterInput] = useState("")
 
   const onInputChange = (event) => {
@@ -23,15 +22,11 @@ export default function App() {
     const fetchData = async () => {
       setIsLoading(true)
       try {
-        const transactionsRes = await axios.get("http://localhost:3001/bank/transactions")
-        if (transactionsRes?.data?.transactions) {
-          setTransactions(transactionsRes.data.transactions)
+        const productRes = await axios.get("http://localhost:3001/products")
+        if (productRes?.data?.products) {
+          setProduct(productRes.data.products)
         }
 
-        const transfersRes = await axios.get("http://localhost:3001/bank/transfers")
-        if (transfersRes?.data?.transfers) {
-          setTransfers(transfersRes.data.transfers)
-        }
       } catch (err) {
         console.log({ err })
         setError(err)
@@ -43,8 +38,8 @@ export default function App() {
     fetchData()
   }, [])
 
-  const addTransaction = (newTransaction) => {
-    setTransactions((transactions) => [...transactions, newTransaction])
+  const addProduct = (newProduct) => {
+    setProduct((products) => [...products, newProduct])
   }
 
   return (
@@ -52,9 +47,12 @@ export default function App() {
       <BrowserRouter>
       <Sidebar/>
       <main>
-      <Navbar filterInput={filterInput} onInputChange={onInputChange} />
+        <Navbar />
         <subNavbar />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home products={products}/>}></Route>
+          <Route path="/products/:productId" element={<ProductDetail/>}></Route>
+        </Routes>
       </main>
       </BrowserRouter>
     </div>

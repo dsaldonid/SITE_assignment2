@@ -26,7 +26,7 @@ app.use((error, req, res, next) => {
   })
 })
 
-const PORT = 3000
+const PORT = 3001
 
 app.listen(PORT, () => {
   console.log(`🚀 Server listening on http://localhost:${PORT}`)

@@ -22,9 +22,22 @@
     border-right: 1px solid #fff;
 }
 
-.wrapper {
+.wrapper1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: white;
+}
+
+.input{
+    width:200px;
+}
+
+.hidden{
+    display: none;
+}
+
+.arrow{
+    color: white;
 }

@@ -35,8 +35,8 @@ router.post("/cart", async (req, res, next) => {
   }
 })
 
-// fetch single transaction
-router.get("/products/:productId", async (req, res, next) => {
+// fetch single product
+router.get("/:productId", async (req, res, next) => {
   try {
     const productId = req.params.productId
     const product = await Store.fetchProductById(productId)

@@ -1,0 +1,16 @@
+.product{
+    width: 150px;
+    height: 150px;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.productSpecs{
+    display: flex;
+    flex-direction: row;
+}
+

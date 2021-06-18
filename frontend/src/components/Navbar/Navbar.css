@@ -82,7 +82,7 @@ li {
   text-align: -webkit-match-parent;
 }
 
-.Navbar .content .links {
+.Navbar .links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,6 +93,16 @@ li {
   max-width: 650px;
 }
 
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .links{
-  justify-content: space-around;
+  display: grid;
+  padding:0 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
 }
