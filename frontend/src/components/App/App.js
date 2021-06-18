@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import axios from "axios"
 import Navbar from "../Navbar/Navbar"
 import subNavbar from "../subNavbar/subNavBar"
+import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import TransactionDetail from "../TransactionDetail/TransactionDetail"
 import "./App.css"
@@ -49,27 +50,12 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar filterInput={filterInput} onInputChange={onInputChange} />
+      <Sidebar/>
+      <main>
+      <Navbar filterInput={filterInput} onInputChange={onInputChange} />
         <subNavbar />
         <Home />
-        {/* <main>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  transfers={transfers}
-                  transactions={transactions}
-                  isLoading={isLoading}
-                  error={error}
-                  filterInput={filterInput}
-                  addTransaction={addTransaction}
-                />
-              }
-            />
-            <Route path="/transactions/:transactionId" element={<TransactionDetail />} />
-          </Routes>
-        </main> */}
+      </main>
       </BrowserRouter>
     </div>
   )

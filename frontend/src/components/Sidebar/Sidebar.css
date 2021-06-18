@@ -1,0 +1,30 @@
+.Sidebar.closed {
+    width: 60px;
+}
+.Sidebar.open {
+    width: 575px;
+}
+
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1 1;
+    transition: all .2s cubic-bezier(.215,.61,.355,1);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0 0 2rem;
+    background-color:#2D4047;
+    border-right: 1px solid #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
