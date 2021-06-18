@@ -71,3 +71,28 @@
   font-weight: 500;
   color: rgba(159, 159, 159, 1);
 }
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.Navbar .content .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-left: auto;
+  flex: 1 1;
+  max-width: 650px;
+}
+
+.links{
+  justify-content: space-around;
+}

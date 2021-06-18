@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import axios from "axios"
 import Navbar from "../Navbar/Navbar"
+import subNavbar from "../subNavbar/subNavBar"
 import Home from "../Home/Home"
 import TransactionDetail from "../TransactionDetail/TransactionDetail"
 import "./App.css"
@@ -49,7 +50,9 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar filterInput={filterInput} onInputChange={onInputChange} />
-        <main>
+        <subNavbar />
+        <Home />
+        {/* <main>
           <Routes>
             <Route
               path="/"
@@ -66,7 +69,7 @@ export default function App() {
             />
             <Route path="/transactions/:transactionId" element={<TransactionDetail />} />
           </Routes>
-        </main>
+        </main> */}
       </BrowserRouter>
     </div>
   )
