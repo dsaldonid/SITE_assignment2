@@ -1,6 +1,6 @@
 ## Week 2 Assignment: Student Store
 
-Submitted by: Diego Saldonid
+Submitted by: Diego Saldonid 
 
 Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
