@@ -25,8 +25,11 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
 
 ### Walkthrough Video
-
+Frontend Functionality 
 https://www.loom.com/share/d1df382f8d7d49299848dbdd7ec2abd2?sharedAppSource=personal_library`
+
+Backend API
+https://www.loom.com/share/43baa2c7fa404a5d936a60d019eac320
 
 ### Reflection
 
