@@ -14,7 +14,7 @@ export default function ProductDetail() {
         setIsLoading(true)
 
         try {
-            const res = await axios.get(`http://localhost:3001/products/${productId}`)
+            const res = await axios.get(`http://localhost:3001/${productId}`)
             if (res?.data?.product) {
             setProduct(res.data.product)
             }
