@@ -1,5 +1,3 @@
-import AddTransaction from "../AddTransaction/AddTransaction"
-import BankActivity from "../BankActivity/BankActivity"
 import ProductCard from "../ProductCard/ProductCard"
 import "./Home.css"
 import { Link } from "react-router-dom"
