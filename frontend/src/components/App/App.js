@@ -51,7 +51,7 @@ export default function App() {
         <subNavbar />
         <Routes>
           <Route path="/" element={<Home products={products}/>}></Route>
-          <Route path="/products/:productId" element={<ProductDetail/>}></Route>
+          <Route path="/:productId" element={<ProductDetail/>}></Route>
         </Routes>
       </main>
       </BrowserRouter>
