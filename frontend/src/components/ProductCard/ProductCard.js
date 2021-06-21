@@ -19,7 +19,7 @@ export default function ProductCard({product}) {
   return (
     <div className="ProductCard">
         <div className ="productInfo">
-            <Link to={`/products/${product.id}`}>
+            <Link to={`/${product.id}`}>
                 <img className = "product" src = {`${product.image}`} alt = {`${product.name}`}></img>
             </Link>
             <div className = "wrapper">
