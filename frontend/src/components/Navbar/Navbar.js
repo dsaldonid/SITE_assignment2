@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import FilterInput from "../FilterInput/FilterInput"
 import codepath from "../../assets/codepath.svg"
 import facebook from "../../assets/facebook.svg"
 import insta from "../../assets/insta.svg"
